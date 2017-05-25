@@ -251,6 +251,7 @@ footer {
   position: fixed;
   bottom: 0;
   background-color: #18bc9c;
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.5);
 }
 .social:hover {
      -webkit-transform: scale(1.1);
