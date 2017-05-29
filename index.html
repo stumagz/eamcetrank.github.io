@@ -300,7 +300,23 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-
+<div id="list">
+    <span><a href="https://www.stumagz.com/civil-engineering-it-s-opportunities/?list_source=magz&list_type=stry&list_id=eamcet">Civil Engineering & Its Opportunities</a></span>
+    <span><a href="https://www.stumagz.com/best-autonomous-colleges-under-jntuh/?list_source=magz&list_type=stry&list_id=eamcet">Best Autonomous Colleges Under JNTUH</a></span>
+    <span><a href="https://www.stumagz.com/best-autonomous-colleges-under-ou-in-telangana-/?list_source=magz&list_type=stry&list_id=eamcet">Best Autonomous Colleges Under OU In Telangana</a></span>
+    <span><a href="https://www.stumagz.com/electrical-engineering-its-opportunities/?list_source=magz&list_type=stry&list_id=eamcet">Electrical Engineering & Its Opportunities</a></span>
+    <span><a href="https://www.stumagz.com/information-technology-its-oppourtunities/?list_source=magz&list_type=stry&list_id=eamcet">Information Technology & Its Opportunities.
+	</a></span>
+	<span><a href="https://www.stumagz.com/electronic-communication-engineering-its-opportunities/?list_source=magz&list_type=stry&list_id=eamcet">Electronic Communication Engineering & Its Opportunities
+	</a></span>
+	<span><a href="https://www.stumagz.com/mechanical-engineering-its-opportunities-/?list_source=magz&list_type=stry&list_id=eamcet">Mechanical Engineering & It's Opportunities
+	</a></span>
+	<span><a href="https://www.stumagz.com/try-these-new-branches-in-your-engineering/?list_source=magz&list_type=stry&list_id=eamcet">Try These New Branches In Your Engineering
+	</a></span>
+	<span><a href="https://www.stumagz.com/computer-science-engineering-its-opportunities-/?list_source=magz&list_type=stry&list_id=eamcet">Computer Science Engineering & It's Opportunities
+	</a></span>
+   
+</div>
 
 </div>
 </div>
@@ -424,9 +440,51 @@
 
 		});
 	}
+	var itemCount = 10, activeScroll = 0, countScroll = 0;
+    setInterval(function() {
+        if(countScroll == (itemCount - 6))
+        {                  
+            activeScroll = 0;
+            countScroll = 0;
+            $('#list').animate({scrollTop: 0});
+        }
+        else
+        {
+            activeScroll += 40;
+            countScroll += 1;
+            $('#list').animate({scrollTop: activeScroll});            
+        }
+        
+    }, 2000);
 
 
 </script>
+<style>
+	* {
+    box-sizing: border-box;
+}
+
+#list {
+    overflow: hidden;
+    width: 100%;
+    height: 250px;
+    background: #f5f5f5;
+    padding: 15px;
+}
+
+#list span {
+    display: block;
+    height: 45px;
+    padding: 10px 10px;
+    margin-bottom: 10px;
+    background: #fff;
+}
+
+.item:last-child {
+    margin-bottom: 0px;
+}
+
+</style>
 </body>
 </html>
 <?php } ?>
