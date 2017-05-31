@@ -426,9 +426,12 @@
 	{
 		$('.clglist').empty();
 		clgdata.forEach(function(item){
-
+			var url = 'https://www.stumagz.com/'+item.magz_code;
 			console.log(item.college_name);
-			var html = '<li class="collection-item avatar"><a style="text-decoration:none;cursor:pointer;color:rgba(0,0,0,0.65)" href="https://www.stumagz.com/'+item.magz_code+'" target="_blank" >'+
+			if(item.magz_code == 'spec') {
+				url = "https://goo.gl/NM8L9U";
+			}
+			var html = '<li class="collection-item avatar"><a style="text-decoration:none;cursor:pointer;color:rgba(0,0,0,0.65)" href="'+url+'" target="_blank" >'+
 				      '<img class="circle" src="/img/'+(item.magz_code == ""? "stumagz":item.magz_code) +'" >'+
 				      '<span class="title" style="font-weight:bold">'+item.college_name+'</span>'+
 				      '<p>Last Rank: '+item.last_rank+' <br>'+
